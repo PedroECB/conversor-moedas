@@ -49,15 +49,15 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "CONVERSOR DE MOEDAS",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
-      backgroundColor: Colors.white,
+//      appBar: AppBar(
+//        title: Text(
+//          "CONVERSOR DE MOEDAS",
+//          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+//        ),
+//        centerTitle: true,
+//        backgroundColor: Colors.teal,
+//      ),
+      backgroundColor: Colors.teal,
       body: FutureBuilder<Map>(
         future: getData(),
         builder: (context, snapshot) {
@@ -88,7 +88,7 @@ class _HomeState extends State<Home> {
                 euro = snapshot.data["results"]["currencies"]["EUR"]["buy"];
 
                 return SingleChildScrollView(
-                  padding: EdgeInsets.all(25.0),
+                  padding: EdgeInsets.fromLTRB(25.0, 70.0, 25.0, 20.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
